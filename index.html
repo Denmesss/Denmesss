@@ -1,185 +1,310 @@
 <!DOCTYPE html>
-<html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-    <link rel="icon" href="armodies.png"  id="armodies"  type="image/x-icon">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: bisque;
+            padding: 20px 25px;
+        }
+        nav{
+            display: inline-block;
+            width: calc(100% - 103px);
+            text-align: right;
+        }
+        nav ul{
+            list-style-type: none;
+
+        }
+        nav ul li{
+            display: inline-block;
+            margin: 10px 25px;
+        }
+        .menu{
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 25px;
+        }   
+        nav ul li a{
+            text-decoration: none;
+            color: rgb(67, 35, 119);
+            padding: 15px 25px;
+            font-size: 19px;
+        }
+        nav ul li a:hover{
+            background-color: antiquewhite;
+            color: rgb(255, 0, 0);
+        }
+
+
+        #section-1{
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(
+                0,0,0,0.8)), url(Armutlu.jpg);
+             background-position: top;  
+             padding: 12px; 
+            height: 1200px;
+            width: 100%;
+            background-size: cover;
+        }  
+        .btn-s1{
+            margin-left: 0%;
+            margin-top: 0%;
+            background-color: bisque;
+            color: #fff;
+            padding: 25px 20px;
+            font-size: 20px;
+            border-radius: 6px;
+            transition: color 1s;
+        } 
+        .btn-s1:hover {
+            color: black;
+        }
+        /*card*/
+        #section-2{
+            display: flex;  
+            justify-content: space-around;
+            margin: 200px 0;
+        }
+        .card{
+            width: 20%;
+            box-shadow: 0 5px 9px 0 rgba(0,0,0,0.4);
+            border-radius: 6px;
+        }
+        .card:hover{
+            opacity: 0.7;
+        }
+        .container{
+            padding: 5px 20px;
+        }
+        .container p{
+            margin: 15px 0;
+        }
+        img{
+            border-radius: 6px 6px 0 0;
+            width: 100%;
+        }
+        p{
+            font-size: 19px
+        }
+        .armodies{
+            text-align: center;
+            width: 40%;
+        }
+        #section-3{
+            display: flex;
+            justify-content: space-around;
+            margin: 200px 0;
+        }
+        footer{
+            background-color: #a2b8ab;
+            color: #fff;
+            text-align: center;
+            font-size: 30px;
+            padding: 20px 0;
+        }
+        .menu{
+            background-color: #a2b8ab;
+            position: absolute;
+            margin: 0%;
+            margin-left: 0%;
+            font-size: 1000%;
+            color: #000000;
+            padding: 0px 707px;
+           
+        }
+    </style>
+
+<script>
+    document.querySelectorAll('a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+    </script>
+
+
+</head>
+<body>
+    <header>
+        <img class="armodies" src="armodies.png"  alt="">
+        <nav>
+            <ul>
+                <li><a href="#tostlar">TOST ÇEŞİTLERİ</a></li>
+                <li><a href="#atistirmaliklar">ATIŞTIRMALIKLAR</a></li>
+                <li><a href="#sicaklar">SICAK İÇECEKLER</a></li>
+                <li><a href="#mesrubatlar">MEŞRUBATLAR</a></li>
+                <li><a href="#kahvalti">KAHVALTI ÇEŞİTLŞERİ</a></li>
+                <li><a href="#tatli">TATLI ÇEŞİTLERİ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="section-1">
+            <button class="btn-s1"><a href="#menu">MENÜ</a></button>
+        </section>
 
 
 
-        <img src="armodies.png"></img>
-      </a>
-</nav>
+        <div>
+            <h1 class="menu" style="text-align:center;" id="menu">MENÜ</h1>
+        </div>   
+
+
+        <section id="section-2">
+            <div class="card">
+                <img src="serpmekahvalti.jpg" alt="">
+                <div class="container">
+                 <h2 id="kahvalti">KAHVALTI ÇEŞİTLERİ</h2>  
+                 <p>Serpme Kahvaltı</p>
+                 <p>350 ₺</p>  
+                 <br>
+                 <p>Tek Kişilik Kahvaltı</p>
+                 <p>160 ₺</p> 
+                 <br>
+                 <p>Sahanda Yumurta</p>
+                 <p>80 ₺</p>             
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="karisiktost.jpg" alt="">
+                <div class="container">
+                    <h2 id="tostlar">TOST ÇEŞİTLERİ</h2>   
+                    <p>Karışık Tost</p>
+                    <p>60 ₺</p>
+                    <br>
+                    <p>Kaşarlı Tost</p>
+                    <p>60 ₺</p>                
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="tiramisu.jpg" alt="">
+                <div class="container">
+                    <h2 id="tatli">TATLI ÇEŞİTLERİ</h2>   
+                    <p>Cheesecake</p>
+                    <p>90 ₺</p> 
+                    <br>
+                    <p>Tiramisu</p>  
+                    <p>90 ₺</p>             
+                </div>
+            </div>
+        
+
+            </div>
+        </section>
 
 
 
-  </div><div class="col-sm-4">
-   <br><br><br><br><br><br><br><br><br><br><br><BR><BR><BR></BR><br>
-        <img src="tekkisilikkahvaltı.jpg" class="img-thumbnail" alt="Image">
-      <div class="box">
-        <h1>KAHVALTI ÇEŞİTLERİ</h1>
-        <br><br><br>
-        <img src="serpmekahvalti.jpg" 
-        width="150">
-        <p>SERPME KAHVALTI</p>
-        <p>350 ₺</p>
-        <br>
-        <img src="tekkisilikkahvaltı.jpg"
-        width="150">
-        <p>TEK KİŞİLİK KAHVALTI</p>
-        <p>160 ₺</p>
-        <br>
-        <img src="sahandayumurta.jpg" 
-        width="150">
-        <p>SAHANDA YUMURTA</p>
-        <p>80 ₺</p>
-      </div>
-      </a></div>
-</div><div class="col-sm-4">
-    <div class="panel">
-    <img src="karisiktost.jpg" class="img-thumbnail" alt="Image">
-      <div class="box">
-        <h1>TOST ÇEŞİTLERİ</h1>
-        <br><br>
-        <div class="box">
-        <img src="karisiktost.jpg" 
-        width="150">
-        <p>KARIŞIK TOST</p>
-        <P>60 ₺</P>
-        </div>
-        <br>
-        <div class="box">
-        <img src="kasarlitost.jpg" 
-        width="150">
-        <p>KAŞARLI TOST</p>
-        <p>60 ₺</p>
-        </div>
-      </div>
-      </a></div>
-  </div>
-</div>
-</div><div class="col-sm-4">
-    <div class="panel">
-    <img src="cheesecake.jpg" class="img-thumbnail" alt="Image">
-      <div class="box">
-        <h1>TATLI ÇEŞİTLERİ</h1>
-        <br><br>
-        <img src="cheesecake.jpg" 
-        width="150">
-        <P>CHEESECAKE</P>
-        <p>90 ₺</p>
-        <br>
-        <img src="tiramisu.jpg"
-        width="150">
-        <p>TİRAMİSU</p>
-        <p>90 ₺</p>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-      </div>
-    </div>
-    </div><div class="col-sm-4">
-        <div class="panel">
-        <img src="fincancay.jpg" class="img-thumbnail" alt="Image">
-          <div class="box">
-            <h1>SICAK İÇECEKLER</h1>
-            <br><br>
-            <img src="cay.jpg" 
-            width="150">
-            <p>ÇAY</p>
-            <p>10 ₺</p>
-            <br>
-            <img src="fincancay.jpg" 
-            width="150">
-            <p>FINCAN ÇAY</p>
-            <p>20 ₺</p>
-            <br>
-            <img src="kusburnu.png" 
-            width="150">
-            <p>KUŞ BURNU</p>
-            <p>10 ₺</p>
-            <br>
-            <img src="salep.jpg" 
-            width="150">
-            <p>SALEP</p>
-            <p>30 ₺</p>
-            <br>
-            <img src="sicakcikolata.jpg" 
-            width="150">
-            <p>SICAK ÇİKOLATA</p>
-            <p>50 ₺</p>
-            <br>
-            <img src="turkkahvesi.jpg" 
-            width="150">
-            <p>TÜRK KAHVESİ</p>
-            <p>35 ₺</p>
-          </div>
-        </div>
-        </div><div class="col-sm-4">
-        <div class="panel">
-        <img src="cips.jpg" class="img-thumbnail" alt="Image">
-          <div class="box">
-            <h1>ATIŞTIRMALIKLAR</h1>
-            <br><br>
-            <img src="cips.jpg" 
-            width="150">
-            <p>CİPS</p>
-            <p>80 ₺</p>
-            <br>
-            <img src="hamburger.jpg" 
-            width="150">
-            <p>HAMBURGER</p>
-            <p>80 ₺</p>  
-          </div>
-          </a></div>
-        </div>
-    </div>
-    </div>
-</div>
-</div><div class="col-sm-4">
-    <div class="panel">
-    <img src="ayran.jpg" class="img-thumbnail" alt="Image">
-      <div class="box">
-        <h1>MEŞRUBATLAR</h1>
-        <br><br>
-        <img src="ayran.jpg" 
-        width="150">
-        <p>AYRAN</p>
-        <p>25 ₺</p>
-        <br>
-        <img src="ayran.jpg"
-        width="150">
-        <p>SU</p>
-        <p>10 ₺</p>
-        <br>
-        <img src="ayran.jpg"
-        width="150">
-        <p>SODA</p>
-        <p>25 ₺</p>
-        <br>
-        <img src="cocacola.jpg"
-        width="150">
-        <p>COCA COLA</p>
-        <p>35 ₺</p>
-        <br>
-        <img src="fanta.jpg"
-        width="150">
-        <p>FANTA</p>
-        <p>35 ₺</p>
-        <br>
-        <img src="ayran.jpg" 
-        width="150">
-        <p>ULUDAĞ GAZOZ</p>
-        <p>35 ₺</p>
-        <br>
-        <img src="ayran.jpg"
-        width="150">
-        <p>LİPTON İCE TEA</p>
-        <p>35 ₺</p>
-      </div>
-</div>
-  </body>
+
+
+
+
+
+
+
+
+        <section id="section-3">
+            <div class="card">
+                <img src="fincancay.jpg" alt="">
+                <div class="container">
+                    <h2 id="sicaklar">SICAK İÇECEKLER</h2>   
+                    <p>Çay</p>
+                    <p>10 ₺</p>
+                    <br>
+                    <p>Fincan Çay</p>
+                    <p>20 ₺</p>  
+                    <br>
+                    <p>Kuşburnu</p>
+                    <p>10 ₺</p>
+                    <br>
+                    <p>Oralet</p>
+                    <p>10 ₺</p>
+                    <br>
+                    <p>Kivi</p>
+                    <p>10 ₺</p>
+                    <br>
+                    <p>Türk Kahvesi</p>
+                    <p>35 ₺</p>
+                    <br>
+                    <p>Sıcak Çikolata</p>
+                    <p>50 ₺</p>              
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="cips.jpg" alt="">
+                <div class="container">
+                    <h2 id="atistirmaliklar">ATIŞTIRMALIKLAR</h2>   
+                    <p>Cips</p>
+                    <p>80 ₺</p>
+                    <br>
+                    <p>Hamburger</p>  
+                    <p>80 ₺</p>
+                    <br>
+                    <p>Gözleme</p>
+                    <p>80 ₺</p>           
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="ayran.jpg" alt="">
+                <div class="container">
+                    <h2 id="mesrubatlar">MEŞRUBATLAR</h2>   
+                    <p>Ayran</p>
+                    <p>25 ₺</p>
+                    <br>
+                    <p>Soda</p>
+                    <p>25 ₺</p>
+                    <br>
+                    <p>Coca Cola</p>
+                    <p>35 ₺</p>
+                    <br>
+                    <p>Fanta</p>
+                    <p>35 ₺</p>
+                    <br>
+                    <p>Uludağ Gazoz</p>
+                    <p>35 ₺</p>
+                    <br>
+                    <p>Lipton Ice Tea</p>
+                    <p>35 ₺</p>
+                    <br>
+                    <p>Su</p>
+                    <p>10 ₺</p>                
+                </div>
+            </div>
+        
+
+            </div>
+        </section>
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <a href="https://www.instagram.com/armodies/reels/" target="_blank">Instagram</a>
+    </footer>
+</body>
 </html>
